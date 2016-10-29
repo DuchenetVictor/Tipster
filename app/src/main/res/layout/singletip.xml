@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:andoid="http://schemas.android.com/tools"
     app:layout_collapseParallaxMultiplier="1.0"
+    android:layout_margin="5dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,11 +17,11 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="60dp" >
+            android:layout_weight="3">
 
             <TextView
                 android:text="TITLE"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtvTitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title" />
@@ -35,13 +36,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtvAuthor"
-                    android:layout_weight="1" />
+                    android:layout_weight="1.62" />
 
                 <TextView
                     android:text="Date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2.08"
                     android:id="@+id/txtvDate" />
 
             </LinearLayout>
@@ -53,7 +54,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/btn_star_big_on"
             android:id="@+id/imageView"
-            android:layout_weight="0.66" />
+            android:layout_weight="1" />
     </LinearLayout>
 
     <TextView
@@ -61,6 +62,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtvTip"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
 </LinearLayout>

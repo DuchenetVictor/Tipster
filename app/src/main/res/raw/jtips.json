@@ -32,6 +32,17 @@
         "bad": "1000"
       },
       "message": "pull the trigger!!!"
+    },
+    {
+      "-ID": "04",
+      "title": "faire caca",
+      "author": "mrhankey",
+      "date": "01/01/2010",
+      "rate": {
+        "good": "01",
+        "bad": "1000"
+      },
+      "message": "pousser tres fort"
     }
   ]
 }

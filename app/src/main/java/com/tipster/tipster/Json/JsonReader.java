@@ -46,7 +46,7 @@ public class JsonReader {
                 int bad = r.getInt("bad");
 
                 String message = t.getString("message");
-                Rate rate = new Rate(good, bad, good + bad);
+                Rate rate = new Rate(good, bad);
 
                 Tip tip = new Tip(ID, title, author, date, rate, message);
 

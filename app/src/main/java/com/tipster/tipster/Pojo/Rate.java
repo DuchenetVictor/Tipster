@@ -10,10 +10,11 @@ public class Rate {
     private int bad;
     private int totalVote;
 
-    public Rate(int totalVote, int bad, int good) {
-        this.totalVote = totalVote;
+    //todo pojo/rate voir avec eddie pour le total vote (à risque)
+    public Rate(int good, int bad) {
         this.bad = bad;
         this.good = good;
+        this.totalVote = this.good + this.bad;
     }
 
     public int getGood() {
@@ -36,7 +37,7 @@ public class Rate {
         this.bad = bad;
     }
 
-    public void setTotalVote(int totalVote) {
-        this.totalVote = totalVote;
-    }
+//    public void setTotalVote(int totalVote) {
+//        this.totalVote = totalVote;
+//    }
 }

@@ -6,14 +6,17 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.tipster.tipster.Adapter.TipsAdapter;
 import com.tipster.tipster.Json.JsonReader;
 import com.tipster.tipster.Pojo.Tip;
 
@@ -22,6 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,18 +61,25 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        List<Tip> Tips = new JsonReader().GetTipFromString(sbuilder.toString());
+        List<Tip> tips = new JsonReader().GetTipFromString(sbuilder.toString());
+
 
         // TODO: 29/10/2016 afficher les tips dans une listView
-        
+        // Construct the data source
+        ArrayList<Tip> arrayOfTips = new ArrayList<Tip>();
+        // Create the adapter to convert the array to views
+        TipsAdapter adapter = new TipsAdapter(this, arrayOfTips);
 
+        // Attach the adapter to a ListView
+        ListView listView = (ListView) findViewById(R.id.lvTips);
+
+        listView.setAdapter(adapter);
+
+        adapter.addAll(tips);
+        Log.d("test","test");
 
 
         // TODO: 29/10/2016 gerer l'envoi de l'identifiant si la personne est authentifiée
-
-
-
-
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
