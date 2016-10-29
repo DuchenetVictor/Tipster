@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tips>
+    <Tip ID="01">
+        <title>Comment faire des patates</title>
+        <author>mrSamuel</author>
+        <date>10/10/2016</date>
+        <rate>
+            <good>30</good>
+            <bad>20</bad>
+        </rate>
+        <Message>fdkjsqfdhsf kqhjdflqhd oiquhdsfoqilsu dnfoqih sudflqisjdhflq isudhfqdf</Message>
+    </Tip>
+    <Tip ID="02">
+        <title>Comment casser des briques</title>
+        <author>drStrange</author>
+        <date>20/01/2016</date>
+        <rate>
+            <good>50</good>
+            <bad>50</bad>
+        </rate>
+        <Message>il faut pour cela mettre des cales aux extremites gauche et droite de la brique et frapper au millieu</Message>
+    </Tip>
+    <Tip ID="03">
+        <title>tuer un homme</title>
+        <author>schwarzy</author>
+        <date>06/006/2014</date>
+        <rate>
+            <good>100</good>
+            <bad>1000</bad>
+        </rate>
+        <Message>pull the trigger!!!</Message>
+    </Tip>
+</tips>
